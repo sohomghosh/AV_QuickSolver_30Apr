@@ -9,8 +9,6 @@ test=pd.read_csv("/home/sohom/Desktop/AV_quick_solver/test.csv")
 user=pd.read_csv("/home/sohom/Desktop/AV_quick_solver/user.csv")
 article=pd.read_csv("/home/sohom/Desktop/AV_quick_solver/article.csv")
 
-set(list(test['ID']))-set(list(train['ID']))
-#No extra items in test set
 
 train_user=train.merge(user, left_on='User_ID', right_on='User_ID', how='left')
 train_user_article=train_user.merge(article,left_on='Article_ID', right_on='Article_ID', how='left')
